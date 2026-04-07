@@ -67,7 +67,7 @@ http.createServer(async (req, res) => {
       score: { creator: 0, opponent: 0 } };
     matches[match_id] = match;
     console.log(`[created] ${match_id} by ${creator_user_id}`);
-    return send(res, 201, { success: true, invite_link: `https://rival-backend-wzba.onrender.com/join-match/${token}`, match });
+    return send(res, 201, { success: true, invite_link: `coinflip.html?token=${token}`, match });
   }
 
   // GET /join-match/:token
